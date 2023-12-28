@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <ImageView
+      android:id="@+id/imageViewBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/baseline_arrow_back_24"
+      android:layout_margin="16dp"
+      android:clickable="true"
+      android:onClick="goBackToLandingPage"/>
+
+  <!-- Button to add a task -->
+  <Button
+      android:id="@+id/buttonAdd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/imageViewBack"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="16dp"
+      android:text="Add Task"
+      android:onClick="addTask"/>
+
+  <!-- TextView for the title "Todo List" -->
+  <TextView
+      android:id="@+id/textViewTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/buttonAdd"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="16dp"
+      android:text="To do List"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <!-- ListView for displaying tasks -->
+  <ListView
+      android:id="@+id/listViewTasks"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/textViewTitle"
+      android:layout_marginTop="8dp"
+      android:layout_margin="16dp"
+      android:clickable="true"
+      android:longClickable="true"/>
+
+  <Button
+      android:id="@+id/buttonDeleteAll"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/listViewTasks"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="16dp"
+      android:text="Delete All"/>
+
+</RelativeLayout>
